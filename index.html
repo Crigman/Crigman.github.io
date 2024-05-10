@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Photo Gallery</title>
     <style>
-        /* Basic styling */
+        /* Basic styling with more vibrant colors */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -13,9 +13,9 @@
             background-color: #f0f0f0;
         }
 
-        /* Navigation menu styling */
+        /* Navigation bar styling with color gradient */
         .navbar {
-            background-color: #333;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
             padding: 15px;
             text-align: center;
         }
@@ -30,10 +30,10 @@
         }
 
         .navbar a:hover {
-            color: #f39c12;
+            color: #f1c40f;
         }
 
-        /* Section styling */
+        /* Section styling with colored backgrounds */
         section {
             padding: 20px;
             max-width: 1000px;
@@ -43,7 +43,19 @@
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Gallery grid styling */
+        section:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #e74c3c;
+        }
+
+        p {
+            color: #2c3e50;
+        }
+
+        /* Gallery grid styling with hover effects */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -58,22 +70,26 @@
         }
 
         .gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Footer styling */
+        /* Footer styling with color gradient */
         footer {
             text-align: center;
-            background-color: #333;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
             color: white;
             padding: 15px;
             font-size: 0.9em;
         }
+
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation bar with links -->
+    <!-- Navigation bar with gradient background -->
     <div class="navbar">
         <a href="#about">About</a>
         <a href="#the-game">The Game</a>
@@ -112,13 +128,9 @@
         <p>If you have any questions or feedback, please feel free to contact us at contact@gamegallery.com.</p>
     </section>
 
-    <!-- Footer with copyright information -->
+    <!-- Footer with gradient background -->
     <footer>
         <p>&copy; 2024 Game Photo Gallery. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-        <p>&copy; Definitely mine. All rights unreserved.</p>
     </footer>
 </body>
 </html>
