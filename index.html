@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Photo Gallery</title>
     <style>
-        /* Basic styling with more vibrant colors */
+        /* Basic styling with black and white colors */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
+            color: #000000;
         }
 
-        /* Navigation bar styling with color gradient */
+        /* Navigation bar styling with black and white colors */
         .navbar {
-            background: linear-gradient(90deg, #3498db, #e74c3c);
+            background-color: #000000;
             padding: 15px;
             text-align: center;
         }
 
         .navbar a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -30,36 +31,14 @@
         }
 
         .navbar a:hover {
-            color: #f1c40f;
-        }
-
-        /* Section styling with colored backgrounds */
-        section {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        section:nth-child(odd) {
-            background-color: #f9f9f9;
-        }
-
-        h2 {
-            color: #e74c3c;
-        }
-
-        p {
-            color: #2c3e50;
+            color: #bbbbbb;
         }
 
         /* Gallery container styling */
         .gallery-container {
             position: relative;
             max-width: 1000px;
-            margin: auto;
+            margin: 20px auto;
         }
 
         .gallery-container img {
@@ -81,6 +60,7 @@
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
+            background-color: rgba(0,0,0,0.5);
         }
 
         .next {
@@ -92,10 +72,36 @@
             background-color: rgba(0,0,0,0.8);
         }
 
-        /* Footer styling with color gradient */
+        /* Section styling for columns */
+        .columns {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .column {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .column h2 {
+            color: #000000;
+        }
+
+        .column p {
+            color: #333333;
+        }
+
+        /* Footer styling with black background */
         footer {
             text-align: center;
-            background: linear-gradient(90deg, #3498db, #e74c3c);
+            background-color: #000000;
             color: white;
             padding: 15px;
             font-size: 0.9em;
@@ -107,7 +113,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation bar with gradient background -->
+    <!-- Navigation bar with black background -->
     <div class="navbar">
         <a href="#about">About</a>
         <a href="#the-game">The Game</a>
@@ -115,23 +121,8 @@
         <a href="#contact-us">Contact Us</a>
     </div>
 
-    <!-- About section -->
-    <section id="about">
-        <h2>About</h2>
-        <p>Welcome to our Minecraft Photo Gallery website. This site showcases images from our minecraft build and provides information about our cultural beauty.</p>
-    </section>
-
-    <!-- The Game section -->
-    <section id="the-game">
-        <h2>The Game</h2>
-        <p>Cultural background: Balinese culture with its natural beauty and the large number of tourists who visit.
-Environmental issues raised: Overtourism leading to water shortages, difficulties in waste management, traffic congestion, and challenges in managing tourists.
-Solutions: Regulating incoming tourists, managing waste, and improving urban planning.</p>
-    </section>
-
     <!-- Gallery section with single large image display -->
     <section id="gallery">
-        <h2>Gallery</h2>
         <div class="gallery-container">
             <img src="https://via.placeholder.com/1000x600" id="currentImage" alt="Gallery Image">
             <a class="prev" onclick="changeImage(-1)">&#10094;</a>
@@ -139,13 +130,23 @@ Solutions: Regulating incoming tourists, managing waste, and improving urban pla
         </div>
     </section>
 
-    <!-- Contact Us section -->
-    <section id="contact-us">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or feedback, please feel free to contact us at contact@gamegallery.com.</p>
-    </section>
+    <!-- Three-column layout for About, The Game, and Contact Us -->
+    <div class="columns">
+        <div class="column" id="about">
+            <h2>About</h2>
+            <p>Welcome to our Game Photo Gallery website. This site showcases images from our game and provides information about the game, the team, and how to contact us.</p>
+        </div>
+        <div class="column" id="the-game">
+            <h2>The Game</h2>
+            <p>Our game is an exciting adventure through a world full of mysteries and challenges. Stay tuned for more details and upcoming events.</p>
+        </div>
+        <div class="column" id="contact-us">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, please feel free to contact us at contact@gamegallery.com.</p>
+        </div>
+    </div>
 
-    <!-- Footer with gradient background -->
+    <!-- Footer with black background -->
     <footer>
         <p>&copy; 2024 Game Photo Gallery. All rights reserved.</p>
     </footer>
