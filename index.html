@@ -131,6 +131,13 @@
         footer p {
             margin: 0;
         }
+
+         /* Visitor counter styling */
+        .visitor-counter {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #dddddd;
+        }
     </style>
 </head>
 <body>
@@ -189,6 +196,9 @@ Cultural Preservation: Tourism can dilute traditions, necessitating efforts to p
     <!-- Footer with black background -->
     <footer>
         <p>&copy; 2024 Hugo & Josh's. All rights reserved.</p>
+        <div class="visitor-counter">
+            <p id="visitorCount">Visitor Count: 0</p>
+        </div>
     </footer>
 
     <script>
@@ -212,6 +222,15 @@ Cultural Preservation: Tourism can dilute traditions, necessitating efforts to p
             document.getElementById("currentImage").src = images[currentIndex].src;
             document.getElementById("imageDescription").innerText = images[currentIndex].description;
         }
+
+        window.onload = function() {
+            if (localStorage.getItem('visitorCount')) {
+                localStorage.setItem('visitorCount', parseInt(localStorage.getItem('visitorCount')) + 1);
+            } else {
+                localStorage.setItem('visitorCount', 1);
+            }
+            document.getElementById('visitorCount').innerText = 'Visitor Count: ' + localStorage.getItem('visitorCount');
+        };
     </script>
 </body>
 </html>
